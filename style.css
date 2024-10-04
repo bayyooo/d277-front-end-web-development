@@ -1,0 +1,75 @@
+
+body {
+    font-family: Fantasy, Copperplate;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #eb96c0;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    flex-shrink: 0; 
+}
+
+
+nav {
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+    flex-shrink: 0;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Flexbox container for section and aside */
+.container {
+    display: flex;
+    flex: 1; /* This ensures the container stretches to fill the space between header and footer */
+    align-items: stretch; /* Make sure section and aside stretch to the same height */
+    padding: 20px;
+}
+
+/* Main content section */
+section {
+    flex: 3; /* Take 3 parts of the space */
+    padding-right: 20px;
+    background-color: #fff;
+}
+
+/* Aside styling (Quick Facts) */
+aside {
+    flex: 1; /* Take 1 part of the space */
+    background-color: #f4f4f4;
+    padding: 20px;
+    box-sizing: border-box;
+    /* Ensure the aside stretches vertically */
+    align-self: stretch;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    flex-shrink: 0; /* Prevent the footer from shrinking */
+}
